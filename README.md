@@ -31,3 +31,7 @@ Dataset loads from Hugging Face `BGPT-OFFICIAL/refute` (config `refute_soundness
 - Dataset: https://huggingface.co/datasets/BGPT-OFFICIAL/refute
 - Technical report: https://huggingface.co/datasets/BGPT-OFFICIAL/refute/blob/main/TECHNICAL_REPORT.md
 - Leaderboard: https://huggingface.co/spaces/BGPT-OFFICIAL/refute-leaderboard
+## Hub integrator index
+
+See also the dataset [INTEGRATORS.md](https://huggingface.co/datasets/BGPT-OFFICIAL/refute/blob/main/INTEGRATORS.md) for all registration links.
+
