@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "refute-inspect"
+version = "0.1.0"
+description = "Inspect AI tasks for the REFUTE scientific critique benchmark"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+dependencies = [
+  "inspect-ai>=0.3",
+  "datasets>=2.18",
+]
+
+[project.urls]
+Homepage = "https://huggingface.co/datasets/BGPT-OFFICIAL/refute"
+Repository = "https://github.com/connerlambden/refute-inspect"
+
+[tool.setuptools.packages.find]
+where = ["src"]
