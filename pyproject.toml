@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "refute-inspect"
-version = "0.1.0"
+version = "0.2.0"
 description = "Inspect AI tasks for the REFUTE scientific critique benchmark"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -14,9 +14,19 @@ dependencies = [
   "datasets>=2.18",
 ]
 
+[project.entry-points.inspect_ai]
+refute_inspect = "refute_inspect"
+
 [project.urls]
 Homepage = "https://huggingface.co/datasets/BGPT-OFFICIAL/refute"
 Repository = "https://github.com/connerlambden/refute-inspect"
 
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "pytest-asyncio>=0.21"]
+
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

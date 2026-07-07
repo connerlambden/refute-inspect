@@ -4,10 +4,13 @@ Inspect AI adapter for **[REFUTE](https://huggingface.co/datasets/BGPT-OFFICIAL/
 
 ## Tasks
 
-| Task | Description |
-|------|-------------|
-| `refute_forced_choice` | Pick the more flawed of twin summaries (contamination-proof, chance 50%) |
-| `refute_soundness` | Binary sound/flawed classification |
+| Task | Items | Scoring |
+|------|-------|---------|
+| `refute_knowledge` | 60 | 4-way MCQ (`multiple_choice` + `choice`; chance = 25%) |
+| `refute_soundness` | 74 | Binary sound/flawed (`generate` + custom scorer) |
+| `refute_forced_choice` | 37 pairs | Paired A/B flaw discrimination (chance = 50%) |
+
+Generative critique tasks (`refute_120`, `refute_hard_60`) require an LLM judge and are omitted here.
 
 ## Install
 
@@ -20,18 +23,26 @@ cd refute-inspect && pip install -e .
 ## Run
 
 ```bash
-inspect eval src/refute_inspect/refute_inspect.py@refute_forced_choice --model openai/gpt-4o
-inspect eval src/refute_inspect/refute_inspect.py@refute_soundness --model openai/gpt-4o
+inspect eval refute_inspect/refute_knowledge --model openai/gpt-4o
+inspect eval refute_inspect/refute_soundness --model openai/gpt-4o
+inspect eval refute_inspect/refute_forced_choice --model openai/gpt-4o
 ```
 
-Dataset loads from Hugging Face `BGPT-OFFICIAL/refute` (config `refute_soundness`, revision pinned at runtime).
+Smoke test without API keys:
+
+```bash
+inspect eval refute_inspect/refute_knowledge --model mockllm/model --limit 1
+```
+
+Dataset loads from Hugging Face `BGPT-OFFICIAL/refute` at revision `2be5046d4097fc213ea8ba7e193719b8da096169`. Override with `REFUTE_KNOWLEDGE_JSONL` or `REFUTE_SOUNDNESS_JSONL` for local JSONL fixtures.
+
+## Register with Inspect Evals
+
+Direct PRs to [inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals) are no longer accepted. Register this package via the [Inspect Evals Register](https://github.com/UKGovernmentBEIS/inspect_evals/blob/main/register/README.md) — one **Register Eval Submission** issue per task.
 
 ## Links
 
 - Dataset: https://huggingface.co/datasets/BGPT-OFFICIAL/refute
 - Technical report: https://huggingface.co/datasets/BGPT-OFFICIAL/refute/blob/main/TECHNICAL_REPORT.md
 - Leaderboard: https://huggingface.co/spaces/BGPT-OFFICIAL/refute-leaderboard
-## Hub integrator index
-
-See also the dataset [INTEGRATORS.md](https://huggingface.co/datasets/BGPT-OFFICIAL/refute/blob/main/INTEGRATORS.md) for all registration links.
-
+- Hub integrator index: https://huggingface.co/datasets/BGPT-OFFICIAL/refute/blob/main/INTEGRATORS.md
