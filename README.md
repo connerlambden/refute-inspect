@@ -48,7 +48,11 @@ Direct PRs to [inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals)
 
 ## Links
 
+- Product: https://bgpt.pro/refute
 - Dataset: https://huggingface.co/datasets/BGPT-OFFICIAL/refute
 - Technical report: https://huggingface.co/datasets/BGPT-OFFICIAL/refute/blob/main/TECHNICAL_REPORT.md
 - Leaderboard: https://huggingface.co/spaces/BGPT-OFFICIAL/refute-leaderboard
 - Hub integrator index: https://huggingface.co/datasets/BGPT-OFFICIAL/refute/blob/main/INTEGRATORS.md
+- bio.tools: https://bio.tools/bgpt-refute
+- ASCL: https://ascl.net/code/v/4795
+- Harvard Dataverse (in review): https://doi.org/10.7910/DVN/IGAJWO
