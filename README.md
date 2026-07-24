@@ -56,3 +56,4 @@ Direct PRs to [inspect_evals](https://github.com/UKGovernmentBEIS/inspect_evals)
 - bio.tools: https://bio.tools/bgpt-refute
 - ASCL: https://ascl.net/code/v/4795
 - Harvard Dataverse (in review): https://doi.org/10.7910/DVN/IGAJWO
+- Software Heritage snapshot: https://archive.softwareheritage.org/browse/origin/directory/?origin_url=https://github.com/connerlambden/refute-inspect
