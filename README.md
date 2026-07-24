@@ -2,6 +2,12 @@
 
 Inspect AI adapter for **[REFUTE](https://huggingface.co/datasets/BGPT-OFFICIAL/refute)** — judge-free tasks for scientific critique and epistemic calibration on recent science paper summaries.
 
+**Why this exists:** AI can sound scientifically careful while quietly turning "may" into "does." REFUTE measures whether models know what the evidence allows, what would overturn a claim, and when confidence is justified.
+
+- Public writeup: https://bgpt.pro/refute
+- Leaderboard: https://huggingface.co/spaces/BGPT-OFFICIAL/refute-leaderboard
+- Interim preprint package: https://github.com/connerlambden/refute-inspect/releases/tag/v3.0.0-preprint
+
 ## Tasks
 
 | Task | Items | Scoring |
