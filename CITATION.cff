@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: "REFUTE: Scientific Critique and Epistemic Calibration Benchmark"
+message: "If you use REFUTE, please cite this software / methods package."
+type: software
+authors:
+  - family-names: Lambden
+    given-names: Conner
+    email: contact@bgpt.pro
+    affiliation: BGPT
+repository-code: "https://github.com/connerlambden/refute-inspect"
+url: "https://bgpt.pro/refute"
+license: Apache-2.0
+version: "3.0.0-preprint"
+date-released: "2026-07-24"
+identifiers:
+  - type: url
+    value: "https://github.com/connerlambden/refute-inspect/releases/tag/v3.0.0-preprint"
+    description: Interim preprint / methods package (Zenodo DOI pending)
+keywords:
+  - scientific critique
+  - epistemic calibration
+  - LLM evaluation
+  - judge-free benchmark
+abstract: >
+  REFUTE is a judge-free offline benchmark for whether models critique recent
+  science paper summaries without quietly overclaiming. Critique skill and
+  calibration often dissociate.
