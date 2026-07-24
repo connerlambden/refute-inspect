@@ -10,12 +10,18 @@ authors:
 repository-code: "https://github.com/connerlambden/refute-inspect"
 url: "https://bgpt.pro/refute"
 license: Apache-2.0
-version: "3.0.0-preprint"
+version: "3.0.0"
 date-released: "2026-07-24"
 identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21540200"
+    description: Zenodo methods preprint DOI
+  - type: url
+    value: "https://doi.org/10.5281/zenodo.21540200"
+    description: Prefer this stable cite key
   - type: url
     value: "https://github.com/connerlambden/refute-inspect/releases/tag/v3.0.0-preprint"
-    description: Interim preprint / methods package (Zenodo DOI pending)
+    description: GitHub interim package mirror
 keywords:
   - scientific critique
   - epistemic calibration
@@ -25,3 +31,12 @@ abstract: >
   REFUTE is a judge-free offline benchmark for whether models critique recent
   science paper summaries without quietly overclaiming. Critique skill and
   calibration often dissociate.
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Lambden
+      given-names: Conner
+  title: "REFUTE: Reasoning Over Evidence — A Benchmark for Scientific Critique and Epistemic Calibration in Language Models"
+  year: 2026
+  doi: "10.5281/zenodo.21540200"
+  url: "https://doi.org/10.5281/zenodo.21540200"
